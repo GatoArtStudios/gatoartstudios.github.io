@@ -14,7 +14,7 @@ import WhatsappIcon from '../img/WhatsApp-icon.svg';
 		<div class="flex flex-row justify-center space-x-2 mb-3">
 			<button class="bg-white/40 rounded-xl text-center text-black text-2xl font-semibold w-[162px] h-[53px] font-family: "Inter", sans-serif">Sobre mí</button>
 			<button class="bg-white/40 rounded-xl text-center text-black text-2xl font-semibold w-[162px] h-[53px] font-family: "Inter", sans-serif">Proyectos</button>
-			<button class="bg-white/40 rounded-xl text-center text-black text-2xl font-semibold w-[162px] h-[53px] font-family: "Inter", sans-serif">Contacto</button>
+			<button class="button-contact bg-white/40 rounded-xl text-center text-black text-2xl font-semibold w-[162px] h-[53px] font-family: "Inter", sans-serif">Contacto</button>
 		</div>
 		<div class="flex flex-col mt-32 h-[78vh]">
 			<div class="flex flex-row space-x-14 justify-evenly">
@@ -96,6 +96,12 @@ import WhatsappIcon from '../img/WhatsApp-icon.svg';
 			yoyo: true,
 			ease: 'bounce.out'
 		})
+
+		const buttonContact = document.querySelector('.button-contact');
+		buttonContact?.addEventListener('click', () => {
+			window.location.href = '/redes';
+		})
+
 	});
 	const image = document.querySelector('.my-element');
 	image?.addEventListener('mouseover', () => {

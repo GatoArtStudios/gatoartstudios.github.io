@@ -1,0 +1,27 @@
+---
+import Redes from '@/pages/redes/redes'
+import Logo from '@/img/logo.jpg'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="GatoArtStudio | Redes" />
+		<meta name="viewport" content="width=device-width" />
+		<meta property="og:title" content="GatoArtStudio">
+		<meta property="og:description" content="Conoce sobre GatoArtStudio.">
+		<meta property="og:image" content={Logo.src}>
+		<meta property="og:url" content="https://gatoartstudios.github.io/redes">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href={Logo.src} />
+		<meta name="generator" content={Astro.generator} />
+		<title>Redes</title>
+
+	</head>
+	<body>
+        <div>
+            <Redes client:load />
+        </div>
+	</body>
+</html>

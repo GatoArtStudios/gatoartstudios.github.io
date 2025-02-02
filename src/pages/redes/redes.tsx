@@ -104,7 +104,7 @@ const Index = () => {
           />
           <SocialCard
             icon={<Twitch className="text-social-twitch" color="#c623ff"/>}
-            name="YouTube"
+            name="Twitch"
             username="@gatoartstudio"
             link="https://www.twitch.tv/gatoartstudio"
             delay={0.9}

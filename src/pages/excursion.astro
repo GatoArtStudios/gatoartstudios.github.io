@@ -1,0 +1,31 @@
+---
+import Logo from '@/img/logo.jpg'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Discord de Excursion Evento">
+		<meta name="viewport" content="width=device-width" />
+		<meta property="og:title" content="Excursion Evento">
+		<meta property="og:description" content="Unete al servidor de discord para participar en la excursion">
+		<meta property="og:image" content={Logo.src}>
+		<meta property="og:url" content="https://gatoartstudio.art/excursion">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href={Logo.src} />
+		<meta name="generator" content={Astro.generator} />
+		<title>Excursion Evento</title>
+
+	</head>
+	<body>
+        <div>
+            <p>Redireccion al servidor de discord
+        </div>
+        <script>
+            window.onload = () => {
+                window.location.href = "https://discord.gg/ceCZpDJjMb";
+            }
+        </script>
+	</body>
+</html>

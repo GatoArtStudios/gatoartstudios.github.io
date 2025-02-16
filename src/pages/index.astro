@@ -1,5 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HomeIcon from '../components/icons/home.jsx';
+import Gamepad2Icon from '../components/icons/gamepad2.jsx';
+import Code2Icon from '../components/icons/code2.jsx';
+import PaletteIcon from '../components/icons/palette.jsx';
+import UserIcon from '../components/icons/user.jsx';
+import RedesIcon from '../components/icons/redes.jsx';
 import Card from '../components/Card.astro';
 import Logo from '../img/logo.jpg';
 import GraphicsSnap from '../img/Graphics-Snap.svg';
@@ -10,64 +16,72 @@ import WhatsappIcon from '../img/WhatsApp-icon.svg';
 ---
 
 <Layout title="GatoArtStudio">
-	<main>
-		<div class="flex flex-row justify-center space-x-2 mb-3">
-			<button class="bg-white/40 rounded-xl text-center text-black text-2xl font-semibold w-[162px] h-[53px] font-family: "Inter", sans-serif">Sobre mí</button>
-			<button class="bg-white/40 rounded-xl text-center text-black text-2xl font-semibold w-[162px] h-[53px] font-family: "Inter", sans-serif">Proyectos</button>
-			<button class="button-contact bg-white/40 rounded-xl text-center text-black text-2xl font-semibold w-[162px] h-[53px] font-family: "Inter", sans-serif">Contacto</button>
+		<div>
+			<!-- Navegacion -->
+			 <nav class="flex gap-8 mb-12 font-bold">
+				<button class="hover:bg-accent hover:text-accent-foreground inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
+					<HomeIcon/>
+					Inicio
+				</button>
+				<button class="hover:bg-accent hover:text-accent-foreground inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
+					<RedesIcon/>
+					Redes
+				</button>
+				<button class="hover:bg-accent hover:text-accent-foreground inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
+					<Code2Icon/>
+					Proyectos
+				</button>
+				<button class="hover:bg-accent hover:text-accent-foreground inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
+					<Gamepad2Icon/>
+					Mods
+				</button>
+				<button class="hover:bg-accent hover:text-accent-foreground inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
+					<PaletteIcon/>
+					Diseños
+				</button>
+				<button class="hover:bg-accent hover:text-accent-foreground inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
+					<UserIcon/>
+					Sobre Mí
+				</button>
+			 </nav>
+
+			<!-- Contenido principal -->
+			 <div class="max-w-2xl w-full text-center mb-12">
+				<div class="mb-8">
+					<img src={Logo.src} class="w-[120px] h-[120px] mx-auto mb-6 rounded-full" alt="GatoArtStudio">
+					<h1 class="text-3xl font-bold mb-2">
+					GatoArtStudio
+					</h1>
+					<p class="text-gray-600 mb-4">Desarrollador & Diseñador Gráfico</p>
+					<p class="text-sm text-gray-500 max-w-lg mx-auto">
+						Especializado en desarrollo de mods y plugins para Minecraft, combinando mis habilidades de programación con
+						diseño gráfico para crear experiencias únicas y atractivas.
+					</p>
+				</div>
+
+				<!-- Botón de contacto -->
+				 <div class="grid gap-3">
+					<link rel="stylesheet" href="">
+						<div class="flex items-center justify-center gap-2 rounded-lg border bg-card text-card-foreground shadow-sm p-4 hover:shadow-md hover:scale-105 transition-all duration-300">
+							<Gamepad2Icon/>
+							Ver Proyectos de Minecraft
+						</div>
+					</link>
+					<link rel="stylesheet" href="">
+						<div class="flex items-center justify-center gap-2 rounded-lg border bg-card text-card-foreground shadow-sm p-4 hover:shadow-md hover:scale-105 transition-all duration-300">
+							<Code2Icon/>
+							Explorar Portfolio de Desarrollo
+						</div>
+					</link>
+					<link rel="stylesheet" href="">
+						<div class="flex items-center justify-center gap-2 rounded-lg border bg-card text-card-foreground shadow-sm p-4 hover:shadow-md hover:scale-105 transition-all duration-300">
+							<PaletteIcon/>
+							Ver Trabajos de Diseño
+						</div>
+					</link>
+				 </div>
+			 </div>
 		</div>
-		<div class="flex flex-col mt-32 h-[78vh]">
-			<div class="flex flex-row space-x-14 justify-evenly">
-				<div style="font-family: 'Anonymous Pro', monospace;" class="flex flex-col items-center justify-center w-96 text-center text-2xl text-black">
-					<h2 class="font-semibold text-4xl font-family: "Inter", sans-serif">
-						Diseñador
-					</h2>
-					<article>
-						Transformo ideas <br>
-						en experiencias visuales que <br>
-						cautivan y comunican con <br>
-						precisión.
-					</article>
-				</div>
-				<div>
-					<img src={Logo.src} alt="GatoArtStudio" class="w-[300px] rounded-full"/>
-				</div>
-				<div style="font-family: 'Anonymous Pro', monospace;" class="flex flex-col items-center justify-center w-96 text-center text-2xl text-black">
-					<h2 class="font-semibold text-4xl font-family: "Inter", sans-serif">
-						&lt;/Código&gt;
-					</h2>
-					<article>
-						Donde el código y <br>
-						la creatividad se encuentran <br>
-						para crear soluciones <br>
-						innovadoras.
-					</article>
-				</div>
-			</div>
-			<div class="flex flex-col justify-center text-black text-center mt-5" style="font-family: 'Anonymous Pro', monospace;">
-				<h2 class="font-semibold text-4xl font-family: "Inter", sans-serif">
-					Hola, Soy GatoArtStudio.
-				</h2>
-				<article class="text-3xl">
-					Diseñador Gráfico & Desarrollador Full Stack. <br>
-					Fusiono creatividad y tecnología para dar vida a ideas.
-				</article>
-			</div>
-			<div class="flex flex-row justify-between items-end h-full">
-				<div>
-					<img src={GraphicsSnap.src} alt="Grafico decorativo en espiral" class="-translate-x-32">
-				</div>
-				<div class="flex flex-col -space-y-5">
-					<img src={GithubIcon.src} alt=""  class="h-[80px]">
-					<img src={DiscordIcon.src} alt=""  class="h-[80px]">
-					<img src={WhatsappIcon.src} alt=""  class="h-[80px]">
-					<img src={InstagramIcon.src} alt=""  class="h-[80px]">
-				</div>
-			</div>
-		</div>
-		<div class="flex flex-col items-center h-[800vh]">
-		</div>
-	</main>
 </Layout>
 
 <style>
